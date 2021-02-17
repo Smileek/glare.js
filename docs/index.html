@@ -41,22 +41,7 @@
       }
     </style>
 
-    <script src="https://raw.githubusercontent.com/Smileek/glare.js/refs/heads/main/src/index.min.cjs"></script>
-    <script>
-      window.onload = () => {
-        addGlare(document.getElementById("text1"));
-        addGlare(document.getElementById("text2"), { angle: 90 });
-        addGlare(document.getElementById("text3"), {
-          distance: 30,
-          angle: 180,
-          glareColor: "#2B9EB3",
-        });
-        addGlare(document.getElementById("text4"), {
-          distance: 50,
-          glareColor: "#44AF69",
-        });
-      };
-    </script>
+    <script src="https://smileek.github.io/glare.js/index.min.cjs"></script>
   </head>
   <body>
     <section>
@@ -77,5 +62,21 @@
       <h1 id="text4">Short</h1>
       <pre>That's it ¯\_(ツ)_/¯</pre>
     </section>
+
+    <script>
+      window.onload = () => {
+        addGlare(document.getElementById("text1"));
+        addGlare(document.getElementById("text2"), { angle: 90 });
+        addGlare(document.getElementById("text3"), {
+          distance: 30,
+          angle: 180,
+          glareColor: "#2B9EB3",
+        });
+        addGlare(document.getElementById("text4"), {
+          distance: 50,
+          glareColor: "#44AF69",
+        });
+      };
+    </script>
   </body>
 </html>
