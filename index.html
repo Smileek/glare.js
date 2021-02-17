@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+        overscroll-behavior: none;
+      }
+      section {
+        position: relative;
+        background-color: #333;
+        color: #fff;
+        display: flex;
+        height: 100vh;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+      }
+      section:nth-child(even) {
+        color: #111;
+        background-color: #eee;
+      }
+      section:first-of-type {
+        padding-top: 45vh;
+      }
+      section:last-of-type {
+        padding-bottom: 55vh;
+      }
+      h1 {
+        max-width: 60%;
+        font-size: 40px;
+        margin: auto;
+      }
+      pre {
+        position: absolute;
+        bottom: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    </style>
+
+    <script src="./src/index.min.cjs"></script>
+    <script>
+      window.onload = () => {
+        addGlare(document.getElementById("text1"));
+        addGlare(document.getElementById("text2"), { angle: 90 });
+        addGlare(document.getElementById("text3"), {
+          distance: 30,
+          angle: 180,
+          glareColor: "#2B9EB3",
+        });
+        addGlare(document.getElementById("text4"), {
+          distance: 50,
+          glareColor: "#44AF69",
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <section>
+      <h1 id="text1">Some text that will be glared on scroll</h1>
+    </section>
+    <section>
+      <h1 id="text2">
+        Same thing but with the light background and a bit different angle
+      </h1>
+    </section>
+    <section>
+      <h1 id="text3">
+        Some other text, which is a long one and shows how it looks like when
+        there's a whole paragraph of a text. Yeah, it still glares, obviously.
+      </h1>
+    </section>
+    <section>
+      <h1 id="text4">Short</h1>
+      <pre>That's it ¯\_(ツ)_/¯</pre>
+    </section>
+  </body>
+</html>
