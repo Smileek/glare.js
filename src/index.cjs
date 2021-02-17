@@ -1,4 +1,4 @@
-const addGlare = (el, overridenOptions) => {
+window.addGlare = (el, overridenOptions) => {
   if (!el) {
     console.error("Glare: element not found");
     return;
