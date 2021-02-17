@@ -1,6 +1,6 @@
 # Glare.js
 
-This is a simple library that helps to add a glaring effect to your text.
+A lightweight library for adding a glowing effect to your text.
 
 🔌 One-file integration  
 🔬 Less than 1Kb  
@@ -13,7 +13,7 @@ This is a simple library that helps to add a glaring effect to your text.
 1. Include the script
 
 ```html
-<script src="https://raw.githubusercontent.com/Smileek/glare.js/refs/heads/main/src/index.min.cjs"></script>
+<script src="https://smileek.github.io/glare.js/index.min.cjs"></script>
 ```
 
 Or just steal the [initial file content](https://raw.githubusercontent.com/Smileek/glare.js/refs/heads/main/src/index.cjs) and add to your bundle.
@@ -38,13 +38,13 @@ window.onload = () => {
 
 | param | default | meaning |
 |---|---|---|
-| distance | 10 | The distance between you color and transparency (in percents) |
-| angle | 105 | The gradient's angle |
-| glareColor | 'gold' | The accent color |
+| distance | 10 | Distance between your color and transparency (in percents) |
+| angle | 105 | Gradient's angle |
+| glareColor | 'gold' | Main color in the gradient |
 
 The result is `background: linear-gradient(${angle}deg, transparent ${percentage - distance}%, ${glareColor} ${percentage}%, transparent ${percentage + distance}%)`, where percentage is calculated from the scrolling position.
 
-So when your text is in the center of screen, you'll have something like `background: linear-gradient(105deg, transparent 40%, gold 50%, transparent 60%)`
+So when your text is in the center of the screen, you'll have something like `background: linear-gradient(105deg, transparent 40%, gold 50%, transparent 60%)`
 
 ## Use it however you want
 
